@@ -1,17 +1,20 @@
-def Missing():
+N = int(input("N = "))
+arr = []
+sum=0
+count=0
+print("Enter the array:")
+for i in range(0,N):
+    k = int(input())
+    arr.append(k)
 
-    N=int(input("N= "))
-    arr=[]
-    print("enter the array:")
-    for i in range(N):
-        arr=int(input(""))
+print("Array:", arr)
 
-        arr.sort()
-        prev=0
-        for i in arr:
-            if i==prev+1:
-                prev=i
-            else:
-                return prev+1
+for k in range(2,N):
+    sum=arr[0]+arr[1]+arr[k]
     
-print(Missing())
+    if sum==0:
+        count+=1
+        print(count)
+
+    
+              
